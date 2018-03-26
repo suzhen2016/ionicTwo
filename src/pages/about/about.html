@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      <span>购买</span>
+      <!--按钮部分跳转-->
+      <span [navPush]="nxPage" [navParams]="params">销售</span>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <h1>我的联系人</h1>
+
+  <ion-item>
+    <ion-label>Daenerys Targaryen</ion-label>
+    <ion-checkbox color="dark" checked="true"></ion-checkbox>
+  </ion-item>
+  <ion-item>
+    <ion-label>Arya Stark</ion-label>
+    <ion-checkbox disabled="true"></ion-checkbox>
+  </ion-item>
+  <ion-item>
+    <ion-label>Daenerys Targaryen</ion-label>
+    <ion-checkbox color="red" checked="true"></ion-checkbox>
+  </ion-item>
+  <!--时间选择组件-->
+  <ion-list>
+    <ion-item>
+      <ion-label>开始时间</ion-label>
+      <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month"></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label>结束时间</ion-label>
+      <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="event.timeStarts"></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label>结束</ion-label>
+      <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.timeEnds"></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name="logo-twitter" item-left></ion-icon>
+      未读信息
+      <ion-badge item-right color='secondary'>260</ion-badge>
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,66 @@
+<!--头部-->
+<ion-header>
+  <ion-navbar>
+    <ion-buttons start>
+      <button ion-button icon-only>
+                <ion-icon name="contact"></ion-icon>
+            </button>
+    </ion-buttons>
+    <ion-title>消息</ion-title>
+    <ion-buttons end>
+            <button ion-button icon-only>
+                <ion-icon name="search">
+                  <ion-nav></ion-nav>
+                </ion-icon>
+            </button>
+        </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<!--内容区域-->
+<ion-content padding>
+  <ion-list>
+    <ion-list-header>消息列表</ion-list-header>
+    <ion-item>
+      <ion-icon></ion-icon>
+      张三
+    </ion-item>
+    <ion-item>
+      <ion-icon></ion-icon>
+      王五
+    </ion-item>
+    <ion-item>
+      <ion-icon></ion-icon>
+      李四
+    </ion-item>
+    <ion-item>
+      <ion-icon></ion-icon>
+      赵六
+    </ion-item>
+  </ion-list>
+  <button ion-button (click)="presentActionSheet()">点我</button>
+  <button ion-button (click)="presentModal()">模态框</button>
+  <button ion-button (click)="goRoute()">去往详情页</button>
+  <h2>显示数据：{{text}} </h2>
+  <button ion-button color='secondary'>确认</button>
+  <button ion-button color='dary' outline>确认</button>
+  <button ion-button color='dary' round>确认</button>
+  <ion-card>
+    <ion-card-header>
+      展示卡标题
+    </ion-card-header>
+    <ion-card-content>
+      大手大脚阿开始搭建搭建安第三空间当松开就打款到静安寺肯德基 大即可的
+    </ion-card-content>
+  </ion-card>
+  <ion-list>
+
+    <ion-item>
+      <ion-label fixed>请输入：</ion-label>
+      <ion-input type="text" placeholder="在此输入" (keyup.enter)='onkey($event)'></ion-input>
+    </ion-item>
+    <ion-item>
+      22{{value}}
+    </ion-item>
+
+  </ion-list>
+</ion-content>
